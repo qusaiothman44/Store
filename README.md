@@ -1,5 +1,4 @@
 # Store
-
 ```mermaid
 erDiagram
 
@@ -29,12 +28,12 @@ erDiagram
         int stock
         bool is_active
         datetime created_at
-        int category_id (FK)
+        int category_id  -- FK to Category
     }
 
     Order {
         int id
-        int user_id (FK)
+        int user_id      -- FK to User
         bool is_paid
         decimal total_price
         datetime created_at
@@ -42,11 +41,10 @@ erDiagram
 
     OrderItem {
         int id
-        int order_id (FK)
-        int product_id (FK)
+        int order_id     -- FK to Order
+        int product_id   -- FK to Product
         int quantity
         decimal price
     }
-
 
 ````
