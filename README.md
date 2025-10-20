@@ -16,35 +16,35 @@ erDiagram
     Category {
         int id
         string name
-        text description
+        string description
     }
 
     Product {
         int id
         string name
-        text description
-        decimal price
+        string description
+        float price
         string image
         int stock
-        bool is_active
+        boolean is_active
         datetime created_at
-        int category_id  -- FK to Category
+        int category_id
     }
 
     Order {
         int id
-        int user_id      -- FK to User
-        bool is_paid
-        decimal total_price
+        int user_id
+        boolean is_paid
+        float total_price
         datetime created_at
     }
 
     OrderItem {
         int id
-        int order_id     -- FK to Order
-        int product_id   -- FK to Product
+        int order_id
+        int product_id
         int quantity
-        decimal price
+        float price
     }
 
 ````
