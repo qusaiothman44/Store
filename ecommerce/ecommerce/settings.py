@@ -124,13 +124,15 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'ddv2w8kgo',
-    'API_KEY': '114586676714513',
-    'API_SECRET': 'HUCv7vfsPV5btDS3LncVMz50ra4',
-}
-
+cloudinary.config(
+    cloud_name="ddv2w8kgo",
+    api_key="352339228444391",
+    api_secret="SPsMxxau4V-NJmo0tCAhFnRrzzA"
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
